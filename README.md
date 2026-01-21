@@ -4,18 +4,18 @@
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 
-## 📋 Overview
+##  Overview
 
 This project demonstrates how to containerize a simple Flask web application using Docker. The application runs in an isolated container environment and can be easily deployed anywhere Docker is supported.
 
-## 🚀 Features
+##  Features
 
 - **Lightweight Python Flask Application** - Simple web server returning "Hello from Docker!"
 - **Docker Containerization** - Application packaged with all dependencies
 - **Port Mapping** - Accessible on localhost:5000
 - **Optimized Image** - Uses `python:3.9-slim` for minimal image size
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 docker-lab/
@@ -68,7 +68,7 @@ http://localhost:5000
 
 ![Flask App](image/image.png)
 
-## 📝 File Descriptions
+##  File Descriptions
 
 ### app.py
 
@@ -96,7 +96,7 @@ EXPOSE 5000
 CMD ["python", "app.py"]
 ```
 
-## 🎯 Docker Commands Reference
+##  Docker Commands Reference
 
 ### View Running Containers
 
@@ -174,7 +174,7 @@ docker logs <container-id>
 
 <<<<<<< HEAD
 =======
-## 📄 License
+##  License
 
 This project is open source and available for educational purposes.
 
@@ -182,13 +182,13 @@ This project is open source and available for educational purposes.
 
 ---
 
-# 🔄 Part 2: Nginx Reverse Proxy
+#  Part 2: Nginx Reverse Proxy
 
 ![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
 
 In this second part of the lab, we implemented an Nginx reverse proxy to route traffic to the backend Flask application.
 
-## 🏗️ Architecture
+##  Architecture
 
 The setup consists of two containers communicating via Docker's network:
 
@@ -197,7 +197,7 @@ The setup consists of two containers communicating via Docker's network:
 
 ![Architecture Diagram](nginx-proxy/image/architecture.png)
 
-## 📂 Nginx Configuration
+##  Nginx Configuration
 
 ### nginx.conf
 
@@ -230,7 +230,7 @@ FROM nginx:alpine
 COPY nginx.conf /etc/nginx/nginx.conf
 ```
 
-## 🚀 Running the Proxy
+##  Running the Proxy
 
 ```bash
 cd nginx-proxy
@@ -239,17 +239,7 @@ docker run -d -p 8080:80 nginx-proxy
 ```
 
 **Container Status:**
+<img width="1918" height="760" alt="image" src="https://github.com/user-attachments/assets/7c5e1106-7caf-4634-ab31-dac558620597" />
 
-![Nginx Container Terminal](nginx-proxy/image/terminal.png)
 
-## ✅ Verification
 
-With both containers running, accessing the proxy redirects to the Flask app:
-
-```bash
-curl http://localhost:8080
-# Output: Hello from Docker!
-```
-
-**⭐ If you found this helpful, please give it a star!**
->>>>>>> 5259139 (Added Nginx reverse proxy implementation and documentation)
