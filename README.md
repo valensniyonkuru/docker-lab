@@ -4,18 +4,18 @@
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 
-## 📋 Overview
+##  Overview
 
 This project demonstrates how to containerize a simple Flask web application using Docker. The application runs in an isolated container environment and can be easily deployed anywhere Docker is supported.
 
-## 🚀 Features
+##  Features
 
 - **Lightweight Python Flask Application** - Simple web server returning "Hello from Docker!"
 - **Docker Containerization** - Application packaged with all dependencies
 - **Port Mapping** - Accessible on localhost:5000
 - **Optimized Image** - Uses `python:3.9-slim` for minimal image size
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 docker-lab/
@@ -165,13 +165,6 @@ docker run -d -p 8080:5000 flask-app
 docker logs <container-id>
 ```
 
-## 📚 What You'll Learn
-
-- ✅ Creating a Dockerfile
-- ✅ Building Docker images
-- ✅ Running containers with port mapping
-- ✅ Using `.dockerignore` for optimization
-- ✅ Managing containers and images
 - ✅ Best practices for Python containerization
 
 ## 🎓 Key Concepts
@@ -182,24 +175,6 @@ docker logs <container-id>
 - **Detached Mode**: `-d` flag runs container in background
 - **Port Mapping**: `-p 5000:5000` maps host port to container port
 
-## 🌟 Next Steps
 
-- Add a `requirements.txt` for better dependency management
-- Implement multi-stage builds for even smaller images
-- Add environment variables for configuration
-- Set up Docker Compose for multi-container applications
-- Push image to Docker Hub
 
-## 👤 Author
 
-**Valens Niyonkuru**
-
-- GitHub: [@valensniyonkuru](https://github.com/valensniyonkuru)
-
-## 📄 License
-
-This project is open source and available for educational purposes.
-
----
-
-**⭐ If you found this helpful, please give it a star!**
