@@ -29,13 +29,13 @@ docker-lab/
 └── README.md           # This file
 ```
 
-## 🛠️ Prerequisites
+##  Prerequisites
 
 - Docker Desktop or Docker Engine installed
 - Basic knowledge of command line
 - Git (for cloning the repository)
 
-## 📦 Installation & Setup
+##  Installation & Setup
 
 ### 1. Clone the Repository
 
@@ -60,23 +60,12 @@ docker build -t flask-app .
 docker run -d -p 5000:5000 flask-app
 ```
 
-**Container Running:**
-
-![Docker Run](image/docker-run.png)
-
-### 4. Access the Application
-
-Open your browser and navigate to:
-
-```
-http://localhost:5000
-```
 
 **Application Output:**
 
-![Flask App](image/flask-app-browser.png)
+![Flask App](image/image.png)
 
-## 📝 File Descriptions
+##  File Descriptions
 
 ### app.py
 
@@ -104,7 +93,7 @@ EXPOSE 5000
 CMD ["python", "app.py"]
 ```
 
-## 🎯 Docker Commands Reference
+##  Docker Commands Reference
 
 ### View Running Containers
 
@@ -165,15 +154,16 @@ docker run -d -p 8080:5000 flask-app
 docker logs <container-id>
 ```
 
-- ✅ Best practices for Python containerization
+-  Best practices for Python containerization
 
-## 🎓 Key Concepts
+##  Key Concepts
 
 - **Base Image**: `python:3.9-slim` - A minimal Python image
 - **Working Directory**: `/app` - Where the application code lives
 - **Port Exposure**: `5000` - Application port
 - **Detached Mode**: `-d` flag runs container in background
 - **Port Mapping**: `-p 5000:5000` maps host port to container port
+
 
 
 
