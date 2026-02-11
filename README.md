@@ -209,15 +209,9 @@ events {}
 http {
     server {
         listen 80;
-
-        resolver 127.0.0.11 valid=30s;
-
+        
         location / {
-            # Route traffic to the Flask container
-            # Using standard Docker gateway IP for Linux/WSL
-            proxy_pass http://172.17.0.1:5000;
-            proxy_set_header Host $host;
-            proxy_set_header X-Real-IP $remote_addr;
+            proxy_pass http://host.docker.internal:5000/
         }
     }
 }
@@ -240,6 +234,7 @@ docker run -d -p 8080:80 nginx-proxy
 
 **Container Status:**
 <img width="1918" height="760" alt="image" src="https://github.com/user-attachments/assets/7c5e1106-7caf-4634-ab31-dac558620597" />
+
 
 
 
